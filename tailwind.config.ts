@@ -15,7 +15,7 @@ const config: Config = {
         hero: 'url("/hero.png")',
       },
       screens: {
-        'xs': {'max': '320px'},
+        'xs': {'max': '480px'},
         'sm': {'max' : '640px'},
         'md': {'max' : '768px'},
         'lg': {'max' : '1024px'},

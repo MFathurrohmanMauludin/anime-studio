@@ -25,7 +25,7 @@ function LoadMore() {
 
   return (
     <>
-      <section className="grid grid-cols-6 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2 gap-10">
+      <section className="grid grid-cols-6 lg:grid-cols-5 md:grid-cols-4 xs:!grid-cols-2 md:gap-6 sm:gap-4 gap-8">
         {data}
       </section>
 
