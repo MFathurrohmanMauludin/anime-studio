@@ -1,7 +1,8 @@
 {
-  "name": "anime_vault",
+  "name": "anime-studio",
   "version": "0.1.0",
   "private": true,
+  "author": "M Fathurrohman Mauludin",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

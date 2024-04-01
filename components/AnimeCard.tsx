@@ -29,12 +29,11 @@ function AnimeCard({ anime, index }: Prop) {
       variants={variants}
       initial="hidden"
       animate="visible"
-      transition={{delay: index * 0.25,
-      ease: 'easeInOut', duration: .5}}
+      transition={{delay: index * 0.25, ease: 'easeInOut', duration: .5}}
       viewport={{amount: 0}}
       className="max-w-sm rounded relative w-full"
     >
-      <div className="relative w-full h-[37vh]">
+      <div className="relative w-full h-[37vh] lg:h-[26vh] xs:h-[27vh]">
         <Image
           src={`https://shikimori.one${anime.image.original}`}
           alt={anime.name}
