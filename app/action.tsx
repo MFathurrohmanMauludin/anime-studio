@@ -1,12 +1,20 @@
 "use server";
 
 import AnimeCard, { AnimeProp } from "@/components/AnimeCard";
+import { shikimoriAPI } from "./api/data";
 
-export const fetchAnime = async (page: number) => {
-    const response = await fetch(`https://shikimori.one/api/animes?page=${page}&limit=8&order=popularity`);
+export const fetchAnime = async (page: number) => {  
+    const anime = {
+      page: page,
+      limit: 12,
+      order: 'ranked',
+      statusAiring: 'released'
+    }
+
+    const response = await fetch(shikimoriAPI({...anime}));
     const data = await response.json();
 
-    return  data.map((item: AnimeProp, index: any) => (
+    return data.map((item: AnimeProp, index: any) => (
         <AnimeCard key={item.id} anime={item} index={index} />
       ));
 }
